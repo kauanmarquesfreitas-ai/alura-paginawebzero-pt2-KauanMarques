@@ -29,6 +29,13 @@
         .artigo-autor{
          font-weight: bold;
         }
+        
+        .direitos{
+            text-align: center;
+            color: darkblue;
+        }
+
+        }
     </style>
 </head>
 <body>
@@ -65,8 +72,21 @@
             </ul>
             <button>👍🏻<span>0</span></button>
            <button>🇧🇷<span>0</span></button>
+           
 
         </article>
     </main>   
+    <foooter>
+        <p class="direitos"> todos os direitos estão reservados a Kauan Marques </p>
+    </foooter>
 </body>
+<script>
+    const botoes = document.querySelectorAll("button");
+
+    botoes.forEach(function(botao)){
+        let curtiu = false; 
+        botao.addEventListener("click", botaoClicado);
+        
+    }
+</script>
 </html>
