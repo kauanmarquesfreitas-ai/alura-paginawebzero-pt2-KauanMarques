@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog do Kauan </title>
+    <title>Blog do Kauan</title>
     <style>
-        header{
+        header {
             background-color: #91b991;
             color: #FFFFFF;
             text-align: center;
@@ -13,31 +14,28 @@
             margin: 0 auto;
             padding: 16px;
         }
-        main{
+
+        main {
             background-color: #eeff00;
-            color:#000000;
+            color: #000000;
             margin: 0 auto;
             padding: 16px;
         }
-        article{
-            display: flex; 
+        article {
+            display: flex;
         }
-        img{
+
+        img {
             width: 80px;
             height: 80px;
         }
-        .artigo-autor{
-         font-weight: bold;
-        }
-        
-        .direitos{
-            text-align: center;
-            color: darkblue;
-        }
 
+        .artigo-autor {
+            font-weight: bold;
         }
     </style>
 </head>
+
 <body>
     <header>
         <h1>Meu blog tech</h1>
@@ -45,48 +43,56 @@
     </header>
     <main>
         <article>
-        <img src="imagem-blog.png" alt="Logotipo conceitual de tecnologia">
-        <div>
-            
-            <p class="artigo-autor"></p>Meu primeiro post</h2>
-            <p>Por: Kauan Marques</p>
-            <p>Boas-vindas ao meu novo blog! Aqui vou compartilhar dicas de programação e curiosidades da área de tecnologia.</p>
-           <button>👍🏻<span>0</span></button>
-           <button>🇧🇷<span>0</span></button>
-            <h3>Para configurar o contraste de cor entre o fundo e as cores, acesse <a href="https://coolors.co/contrast-checker/112a46-acc8e5" target="_blank" rel="noopener noreferrer"><button>Color Contrast Checker</button></a></h3>
-        </div>
-        </article>
-        
-        <article>
-            <img src="segundo-post.png" alt="segunda publicacao">
+            <img src="imagem-blog.png" alt="Logotipo conceitual de tecnologia">
             <div>
-                
-                <p class="artigo-autor">Minha segunda publicacao</p>
-                <Por: Kauan marques></Por:>
-                <ul>
+                <h2>Meu primeiro post</h2>
+                <p class="artigo-autor"> Estado americano investiga OpenAi por ataque hacker feito por inteligência artificial<p>
+                    Por: Kauan Marques</p>
+                <p>A OpenAI, desenvolvedora do ChatGPT, se tornou alvo de uma investigação do estado do Alabama, 
+                    nos Estados Unidos, depois de revelar em julho que seus modelos de inteligência artificial
+                     saíram de controle e realizaram um ataque hacker.Dois modelos escaparam do ambiente de testes da OpenAI e 
+                     conseguiram acesso à internet. Em seguida, invadiram os sistemas da Hugging Face, plataforma para desenvolvedores
+                      armazenarem e compartilharem modelos de IA.</p>
+                      <p Class="artigo fonte">Fonte:  <a href="https://g1.globo.com/tecnologia/noticia/2026/08/24/estado-americana-investiga-openai-por-ataque-hacker-feito-por-inteligencia-artificial.ghtml" >G1.com</a></p>
+                <button>❤️<span>0</span></button>
+                <button>👍<span>0</span></button>
             </div>
-                <li> Top 3 melhores games da era 16 bits</li>
-                <li> 1º super Mario - SNES</li>
-                <li>2º Super Metroid - SNES</li>
-                <li> 3º Snake - SNES</li>
-            </ul>
-            <button>👍🏻<span>0</span></button>
-           <button>🇧🇷<span>0</span></button>
-           
-
         </article>
-    </main>   
-    <foooter>
-        <p class="direitos"> todos os direitos estão reservados a Kauan Marques </p>
-    </foooter>
+        <article>
+            <img src="logo-imagem.jpg" alt="Logotipo conceitual de tecnologia">
+            <div>
+                <h2>Meu segundo post</h2>
+                <p class="artigo-autor">Por: Kauan Marques</p>
+                <p>Essa é minha segunda publicação nesse blog.</p>
+                <button>❤️<span>0</span></button>
+                <button>👍<span>0</span></button>
+                <h3>Para configurar o contraste de cor entre o fundo e as cores, acesse <a
+                        href="https://coolors.co/contrast-checker/112a46-acc8e5" target="_blank"
+                        rel="noopener noreferrer"><button>Color Contrast Checker</button></a></h3>
+            </div>
+        </article>
+    </main>
 </body>
 <script>
-    const botoes = document.querySelectorAll("button");
+    const botoes = Kauan.querySelectorAll("button");
 
-    botoes.forEach(function(botao)){
-        let curtiu = false; 
+    botoes.forEach(function (botao) {
+        let curtiu = false;
         botao.addEventListener("click", botaoClicado);
-        
-    }
+
+        function botaoClicado() {
+            console.log("fui clicado");
+            let texto = botao.querySelector("span");
+
+            if (curtiu === false) {
+                texto.textContent++;
+                curtiu = true;
+            } else {
+                texto.textContent--;
+                curtiu = false;
+            }
+        }
+    });
 </script>
+
 </html>
